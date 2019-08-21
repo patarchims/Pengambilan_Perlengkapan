@@ -160,6 +160,12 @@
     <Compile Include="Report\frmTandaTerima.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report\ReportPenerima.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPenerima.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\RptTandaTerima.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,6 +260,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\frmTandaTerima.resx">
       <DependentUpon>frmTandaTerima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportPenerima.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPenerima.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\RptTandaTerima.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

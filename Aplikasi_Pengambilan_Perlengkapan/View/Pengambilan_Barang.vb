@@ -286,7 +286,7 @@ ErrorHandler:
         Dr = sqlcommand.ExecuteReader()
         Dr.Read()
         sql = "INSERT INTO barang_keluar values ('" & lblNoPengambilan.Text & "','" & _
-           Format(dptTanggal.Value, "yyyy/MM/dd") & "','" & txtnim.Text & "','" & txtnama.Text & "','" & txtjurusan.Text & "')"
+           Format(dptTanggal.Value, "yyyy/MM/dd") & "','" & txtnim.Text & "')"
         sqlcommand = New MySql.Data.MySqlClient.MySqlCommand(sql, conn)
         tutupkoneksi()
         cekkoneksi()

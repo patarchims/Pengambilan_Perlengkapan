@@ -29,6 +29,7 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cboBulan = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -118,12 +119,20 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.Label13.TabIndex = 47
         Me.Label13.Text = "Bulan"
         '
+        'Panel1
+        '
+        Me.Panel1.Location = New System.Drawing.Point(0, 101)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(979, 482)
+        Me.Panel1.TabIndex = 21
+        '
         'frmReportPenerimaPerlengkapan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(144, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(199, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(979, 584)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -140,4 +149,5 @@ Partial Class frmReportPenerimaPerlengkapan
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cboBulan As System.Windows.Forms.ComboBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
