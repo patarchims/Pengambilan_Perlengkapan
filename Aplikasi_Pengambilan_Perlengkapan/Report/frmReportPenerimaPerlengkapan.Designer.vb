@@ -30,7 +30,10 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.cboBulan = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CRV = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.ReportPenerima1 = New Aplikasi_Pengambilan_Perlengkapan.ReportPenerima()
         Me.GroupBox1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -121,10 +124,24 @@ Partial Class frmReportPenerimaPerlengkapan
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.CRV)
         Me.Panel1.Location = New System.Drawing.Point(0, 101)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(979, 482)
         Me.Panel1.TabIndex = 21
+        '
+        'CRV
+        '
+        Me.CRV.ActiveViewIndex = 0
+        Me.CRV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CRV.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CRV.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CRV.Location = New System.Drawing.Point(0, 0)
+        Me.CRV.Name = "CRV"
+        Me.CRV.ReportSource = Me.ReportPenerima1
+        Me.CRV.Size = New System.Drawing.Size(979, 482)
+        Me.CRV.TabIndex = 21
+        Me.CRV.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmReportPenerimaPerlengkapan
         '
@@ -139,6 +156,7 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.Name = "frmReportPenerimaPerlengkapan"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -150,4 +168,6 @@ Partial Class frmReportPenerimaPerlengkapan
     Friend WithEvents cboBulan As System.Windows.Forms.ComboBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents CRV As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents ReportPenerima1 As Aplikasi_Pengambilan_Perlengkapan.ReportPenerima
 End Class

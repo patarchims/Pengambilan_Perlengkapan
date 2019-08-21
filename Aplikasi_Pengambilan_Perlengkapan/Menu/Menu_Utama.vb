@@ -164,4 +164,13 @@ Public Class Menu_Utama
         Panel_Fill.Controls.Add(frmTandaTerima)
         frmTandaTerima.Show()
     End Sub
+    Sub LaporanPerlengkapan()
+        Panel_Fill.Controls.Clear()
+        frmReportPenerimaPerlengkapan.TopLevel = False
+        Panel_Fill.Controls.Add(frmReportPenerimaPerlengkapan)
+        frmReportPenerimaPerlengkapan.Show()
+    End Sub
+    Private Sub LaporanPenerimaPerlengkapanToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LaporanPenerimaPerlengkapanToolStripMenuItem.Click
+        LaporanPerlengkapan()
+    End Sub
 End Class

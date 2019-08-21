@@ -51,6 +51,7 @@ Partial Class Menu_Utama
         Me.lbltime = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel_Fill = New System.Windows.Forms.Panel()
+        Me.LaporanPenerimaPerlengkapanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -138,7 +139,7 @@ Partial Class Menu_Utama
         Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PengambilanBarangToolStripMenuItem, Me.BarangMasukToolStripMenuItem})
         Me.MenuToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
-        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(118, 24)
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(117, 24)
         Me.MenuToolStripMenuItem.Text = "Data Transakasi"
         '
         'PengambilanBarangToolStripMenuItem
@@ -155,7 +156,7 @@ Partial Class Menu_Utama
         '
         'REPORTToolStripMenuItem
         '
-        Me.REPORTToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaBarnagToolStripMenuItem})
+        Me.REPORTToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TandaTerimaBarnagToolStripMenuItem, Me.LaporanPenerimaPerlengkapanToolStripMenuItem})
         Me.REPORTToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.REPORTToolStripMenuItem.Name = "REPORTToolStripMenuItem"
         Me.REPORTToolStripMenuItem.Size = New System.Drawing.Size(70, 24)
@@ -164,7 +165,7 @@ Partial Class Menu_Utama
         'TandaTerimaBarnagToolStripMenuItem
         '
         Me.TandaTerimaBarnagToolStripMenuItem.Name = "TandaTerimaBarnagToolStripMenuItem"
-        Me.TandaTerimaBarnagToolStripMenuItem.Size = New System.Drawing.Size(249, 22)
+        Me.TandaTerimaBarnagToolStripMenuItem.Size = New System.Drawing.Size(276, 22)
         Me.TandaTerimaBarnagToolStripMenuItem.Text = "Tanda Terima Perlengkapan"
         '
         'Panel5
@@ -326,6 +327,12 @@ Partial Class Menu_Utama
         Me.Panel_Fill.Size = New System.Drawing.Size(979, 584)
         Me.Panel_Fill.TabIndex = 2
         '
+        'LaporanPenerimaPerlengkapanToolStripMenuItem
+        '
+        Me.LaporanPenerimaPerlengkapanToolStripMenuItem.Name = "LaporanPenerimaPerlengkapanToolStripMenuItem"
+        Me.LaporanPenerimaPerlengkapanToolStripMenuItem.Size = New System.Drawing.Size(276, 22)
+        Me.LaporanPenerimaPerlengkapanToolStripMenuItem.Text = "Laporan Penerima Perlengkapan"
+        '
         'Menu_Utama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -377,4 +384,5 @@ Partial Class Menu_Utama
     Friend WithEvents BarangMasukToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PemasokBarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TandaTerimaBarnagToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LaporanPenerimaPerlengkapanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
