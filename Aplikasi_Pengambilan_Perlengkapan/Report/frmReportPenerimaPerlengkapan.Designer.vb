@@ -30,8 +30,8 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.cboBulan = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CRV = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.ReportPenerima1 = New Aplikasi_Pengambilan_Perlengkapan.ReportPenerima()
+        Me.CRV = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -140,7 +140,7 @@ Partial Class frmReportPenerimaPerlengkapan
         Me.CRV.Name = "CRV"
         Me.CRV.ReportSource = Me.ReportPenerima1
         Me.CRV.Size = New System.Drawing.Size(979, 482)
-        Me.CRV.TabIndex = 21
+        Me.CRV.TabIndex = 22
         Me.CRV.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmReportPenerimaPerlengkapan
@@ -168,6 +168,6 @@ Partial Class frmReportPenerimaPerlengkapan
     Friend WithEvents cboBulan As System.Windows.Forms.ComboBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents CRV As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents ReportPenerima1 As Aplikasi_Pengambilan_Perlengkapan.ReportPenerima
+    Friend WithEvents CRV As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

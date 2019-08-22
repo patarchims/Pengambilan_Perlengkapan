@@ -14,8 +14,7 @@
     Private Sub TandaTerima_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         CRV.ReportSource = Nothing
         CRV.RefreshReport()
-        'CRV.SelectionFormula = "({cabang})='" & Val(cboCabang.Text) & "'"
-        CRV.SelectionFormula = "({command.no_keluar}) like'" & Pengambilan_Barang.lblNoPengambilan.Text & "'"
+        CRV.SelectionFormula = "({command.no_keluar}) ='" & Pengambilan_Barang.lblNoPengambilan.Text & "'"
         RptTandaTerima1.Load("RptTandaTerima.rpt")
         CRV.ReportSource = RptTandaTerima1
         CRV.RefreshReport()

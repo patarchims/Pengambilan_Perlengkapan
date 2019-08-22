@@ -454,9 +454,9 @@ Partial Class Pengambilan_Barang
         Me.lblNoPengambilan.BackColor = System.Drawing.Color.Transparent
         Me.lblNoPengambilan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblNoPengambilan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNoPengambilan.Location = New System.Drawing.Point(12, 447)
+        Me.lblNoPengambilan.Location = New System.Drawing.Point(12, 483)
         Me.lblNoPengambilan.Name = "lblNoPengambilan"
-        Me.lblNoPengambilan.Size = New System.Drawing.Size(170, 27)
+        Me.lblNoPengambilan.Size = New System.Drawing.Size(314, 27)
         Me.lblNoPengambilan.TabIndex = 89
         Me.lblNoPengambilan.Text = "NOMOR"
         '

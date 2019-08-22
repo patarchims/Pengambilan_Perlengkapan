@@ -157,14 +157,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Aplikasi_Pengambilan_Perlengkapan.exe" size="1102848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Aplikasi_Pengambilan_Perlengkapan.exe" size="1106944">
       <assemblyIdentity name="Aplikasi_Pengambilan_Perlengkapan" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>SXgCbKetGj8fYoqMwBkoiHRwfsM=</dsig:DigestValue>
+        <dsig:DigestValue>yt1nLbISh3+61geDO5PIRjaXbjE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

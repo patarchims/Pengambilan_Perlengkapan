@@ -297,7 +297,7 @@ ErrorHandler:
         BtnTambah.Enabled = True
         TampilGridBarangKeluar()
         lblitem.Text = ""
-        'TandaTerima.ShowDialog()
+        TandaTerima.ShowDialog()
     End Sub
 
     Private Sub GrdView_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles GrdView.CellContentDoubleClick

@@ -22,15 +22,20 @@ Partial Class frmTandaTerima
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BtnView = New System.Windows.Forms.Button()
-        Me.CboTahun = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cboBulan = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.CRV = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.RptTandaTerima1 = New Aplikasi_Pengambilan_Perlengkapan.RptTandaTerima()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.BtnView = New System.Windows.Forms.Button()
+        Me.txtnim = New System.Windows.Forms.TextBox()
+        Me.GrdView = New System.Windows.Forms.DataGridView()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CRV = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        CType(Me.GrdView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,23 +52,16 @@ Partial Class frmTandaTerima
         Me.Label2.Text = "Laporan Tanda Terima Perlengkapan"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'GroupBox1
+        'Label13
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.GroupBox1.Controls.Add(Me.BtnView)
-        Me.GroupBox1.Controls.Add(Me.CboTahun)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.cboBulan)
-        Me.GroupBox1.Controls.Add(Me.Label13)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 38)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(979, 57)
-        Me.GroupBox1.TabIndex = 19
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "FILTER"
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(44, 26)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(30, 13)
+        Me.Label13.TabIndex = 47
+        Me.Label13.Text = "NIM"
         '
         'BtnView
         '
@@ -80,45 +78,87 @@ Partial Class frmTandaTerima
         Me.BtnView.Text = "View"
         Me.BtnView.UseVisualStyleBackColor = False
         '
-        'CboTahun
+        'txtnim
         '
-        Me.CboTahun.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CboTahun.FormattingEnabled = True
-        Me.CboTahun.Location = New System.Drawing.Point(297, 17)
-        Me.CboTahun.Name = "CboTahun"
-        Me.CboTahun.Size = New System.Drawing.Size(139, 24)
-        Me.CboTahun.TabIndex = 50
+        Me.txtnim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtnim.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtnim.ForeColor = System.Drawing.Color.Black
+        Me.txtnim.Location = New System.Drawing.Point(95, 18)
+        Me.txtnim.Name = "txtnim"
+        Me.txtnim.Size = New System.Drawing.Size(328, 26)
+        Me.txtnim.TabIndex = 71
         '
-        'Label1
+        'GrdView
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(248, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 49
-        Me.Label1.Text = "Tahun"
+        Me.GrdView.AllowUserToAddRows = False
+        Me.GrdView.AllowUserToDeleteRows = False
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FloralWhite
+        Me.GrdView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        Me.GrdView.BackgroundColor = System.Drawing.Color.White
+        Me.GrdView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.GrdView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.GrdView.ColumnHeadersHeight = 24
+        Me.GrdView.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GrdView.DefaultCellStyle = DataGridViewCellStyle8
+        Me.GrdView.EnableHeadersVisualStyles = False
+        Me.GrdView.GridColor = System.Drawing.Color.White
+        Me.GrdView.Location = New System.Drawing.Point(95, 42)
+        Me.GrdView.Margin = New System.Windows.Forms.Padding(5)
+        Me.GrdView.MultiSelect = False
+        Me.GrdView.Name = "GrdView"
+        Me.GrdView.ReadOnly = True
+        Me.GrdView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.CadetBlue
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkSlateGray
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.GrdView.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.GrdView.RowHeadersWidth = 30
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.DarkSlateGray
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White
+        Me.GrdView.RowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.GrdView.RowTemplate.Height = 18
+        Me.GrdView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.GrdView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.GrdView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.GrdView.Size = New System.Drawing.Size(328, 65)
+        Me.GrdView.TabIndex = 305
         '
-        'cboBulan
+        'GroupBox1
         '
-        Me.cboBulan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cboBulan.FormattingEnabled = True
-        Me.cboBulan.Location = New System.Drawing.Point(89, 20)
-        Me.cboBulan.Name = "cboBulan"
-        Me.cboBulan.Size = New System.Drawing.Size(139, 24)
-        Me.cboBulan.TabIndex = 48
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(44, 26)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(39, 13)
-        Me.Label13.TabIndex = 47
-        Me.Label13.Text = "Bulan"
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GroupBox1.Controls.Add(Me.GrdView)
+        Me.GroupBox1.Controls.Add(Me.txtnim)
+        Me.GroupBox1.Controls.Add(Me.BtnView)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GroupBox1.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(0, 38)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(979, 115)
+        Me.GroupBox1.TabIndex = 19
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "FILTER"
         '
         'CRV
         '
@@ -126,11 +166,11 @@ Partial Class frmTandaTerima
         Me.CRV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CRV.Cursor = System.Windows.Forms.Cursors.Default
         Me.CRV.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CRV.Location = New System.Drawing.Point(0, 95)
+        Me.CRV.Location = New System.Drawing.Point(0, 153)
         Me.CRV.Name = "CRV"
         Me.CRV.ReportSource = Me.RptTandaTerima1
-        Me.CRV.Size = New System.Drawing.Size(979, 489)
-        Me.CRV.TabIndex = 20
+        Me.CRV.Size = New System.Drawing.Size(979, 431)
+        Me.CRV.TabIndex = 21
         Me.CRV.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'frmTandaTerima
@@ -145,18 +185,18 @@ Partial Class frmTandaTerima
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmTandaTerima"
         Me.Text = "frmTandaTerima"
+        CType(Me.GrdView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents BtnView As System.Windows.Forms.Button
-    Friend WithEvents CboTahun As System.Windows.Forms.ComboBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cboBulan As System.Windows.Forms.ComboBox
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents CRV As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents RptTandaTerima1 As Aplikasi_Pengambilan_Perlengkapan.RptTandaTerima
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents BtnView As System.Windows.Forms.Button
+    Friend WithEvents txtnim As System.Windows.Forms.TextBox
+    Friend WithEvents GrdView As System.Windows.Forms.DataGridView
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents CRV As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class
